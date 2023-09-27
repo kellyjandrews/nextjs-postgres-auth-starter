@@ -19,7 +19,7 @@ export default function UIToolKit({ signature, chatroom, user }) {
   useUIToolKit()
 
   useEffect(() => {
-    if (!signature || !chatroom || !user) return
+    console.log(!signature || !chatroom || !user)
     if (roomState === 'room') {
       let UIToolKitConfig = {
         videoSDKJWT: signature.signature,
