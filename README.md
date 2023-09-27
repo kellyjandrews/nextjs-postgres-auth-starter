@@ -1,3 +1,17 @@
+## Deploy Your Own
+
+You can clone & deploy it to Vercel with one click:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/kellyjandrews/zoom-uitoolkit-demo&env=NEXTAUTH_SECRET&env=APP_URL&env=ZOOM_SDK_KEY&env=ZOOM_SDK_SECRET&env=ZOOM_HOST_EMAIL&stores=%5B%7B"type"%3A"postgres"%7D%5D)
+
+## Developing Locally
+
+You can clone & create this repo with the following command
+
+```bash
+npx create-next-app nextjs-typescript-starter --example "https://github.com/vercel/nextjs-postgres-auth-starter"
+```
+
 ## Getting Started
 
 First, run the development server:
