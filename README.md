@@ -1,15 +1,3 @@
-<p align="center">
-  <a href="https://nextjs-postgres-auth.vercel.app/">
-    <h3 align="center">Zoom Video SDK Example App</h3>
-  </a>
-</p>
-
-<p align="center">
-This is a <a href="https://nextjs.org/">Next.js</a> starter kit that uses <a href="https://next-auth.js.org/">Next-Auth</a> for simple email + password login<br/>
-<a href="https://www.prisma.io/">Prisma</a> as the ORM, and a <a href="https://vercel.com/postgres">Vercel Postgres</a> database to persist the data.</p>
-
-<br/>
-
 ## Getting Started
 
 First, run the development server:
