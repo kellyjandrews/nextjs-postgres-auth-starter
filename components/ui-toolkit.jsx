@@ -13,13 +13,14 @@ function useUIToolKit() {
     }
   }, [])
 }
-
+// do nothing if no chatroom
 export default function UIToolKit({ signature, chatroom, user }) {
   const [roomState, setRoomState] = useState('preview')
   useUIToolKit()
-
+  console.log({ signature, chatroom, user })
   useEffect(() => {
-    console.log(!signature || !chatroom || !user)
+    if (!signature || !chatroom || !user) return
+
     if (roomState === 'room') {
       let UIToolKitConfig = {
         videoSDKJWT: signature.signature,
