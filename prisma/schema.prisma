@@ -3,7 +3,6 @@
 
 generator client {
   provider = "prisma-client-js"
-  previewFeatures = ["jsonProtocol"]
 }
 
 datasource db {
@@ -17,4 +16,12 @@ model User {
   id        Int     @id @default(autoincrement())
   email     String  @unique
   password  String
+  host      Boolean @default(false)
+}
+
+model ChatRoom {
+  id        Int     @id @default(autoincrement())
+  passcode  String
+  roomname  String  @unique
+  enabled   Boolean @default(true)
 }

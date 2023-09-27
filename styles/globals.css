@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.videocontrols,
+.microphonecontrols,
+.speakercontrols {
+  min-width: 300px !important;
+}
+
+.previewcontrols button.mdc-fab {
+  width: 16px !important;
+  height: 16px !important;
+}
