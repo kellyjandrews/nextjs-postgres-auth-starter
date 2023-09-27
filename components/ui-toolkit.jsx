@@ -19,6 +19,7 @@ export default function UIToolKit({ signature, chatroom, user }) {
   useUIToolKit()
 
   useEffect(() => {
+    if (!signature || !chatroom || !user) return
     if (roomState === 'room') {
       let UIToolKitConfig = {
         videoSDKJWT: signature.signature,
@@ -38,7 +39,6 @@ export default function UIToolKit({ signature, chatroom, user }) {
       })
     }
   }, [roomState, signature, chatroom, user])
-  if (!signature || !chatroom || !user) return
 
   if (roomState === 'preview') {
     return (
@@ -49,8 +49,6 @@ export default function UIToolKit({ signature, chatroom, user }) {
     )
   }
   if (roomState === 'room') {
-    // if (typeof window.ZoomUIToolKit === 'undefined') return
-
     return (
       <div id="UIToolkit">
         <app-uitoolkit></app-uitoolkit>
