@@ -2,8 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import '@zoom/videosdk-ui-toolkit/dist/videosdk-ui-toolkit.css'
-
-// import { signOut } from 'next-auth/react'
+import { signOut } from 'next-auth/react'
 
 function useUIToolKit() {
   const loadUIKit = async () =>
@@ -31,12 +30,15 @@ export default function UIToolKit({ signature, chatroom, user }) {
       const initUIToolKit = (config) => {
         window.ZoomUIToolKit.init(config)
         window.ZoomUIToolKit.join()
-        window.ZoomUIToolKit.subscribe('uitoolkit-destroy', () => {})
       }
       initUIToolKit(UIToolKitConfig)
+
+      return window.ZoomUIToolKit.subscribe('uitoolkit-destroy', () => {
+        signOut()
+      })
     }
   }, [roomState, signature, chatroom, user])
-  if (!signature || !chatroom || !user) return
+  // if (!signature || !chatroom || !user) return
 
   if (roomState === 'preview') {
     return (
@@ -56,9 +58,3 @@ export default function UIToolKit({ signature, chatroom, user }) {
     )
   }
 }
-
-// useEffect(() => {
-//   if (roomState === 'joined') {
-
-//   }
-// }, [roomState, chatRoom, saveChatRoom])

@@ -19,7 +19,6 @@ export async function POST(request) {
     iat: iat,
     exp: exp,
   }
-  console.log(oPayload)
 
   const sHeader = JSON.stringify(oHeader)
   const sPayload = JSON.stringify(oPayload)

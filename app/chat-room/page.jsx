@@ -1,4 +1,3 @@
-import SignOut from '../../components/sign-out'
 import UIToolKit from '../../components/ui-toolkit'
 import { getUser, getChatroom, getJWT } from '../../lib/fetch'
 import { getServerSession } from 'next-auth/next'
@@ -12,7 +11,6 @@ export default async function ChatRoom() {
   return (
     <div>
       <UIToolKit signature={signature} chatroom={chatroom} user={user} />
-      <SignOut />
     </div>
   )
 }
