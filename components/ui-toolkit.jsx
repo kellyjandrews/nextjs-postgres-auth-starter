@@ -38,7 +38,7 @@ export default function UIToolKit({ signature, chatroom, user }) {
       })
     }
   }, [roomState, signature, chatroom, user])
-  // if (!signature || !chatroom || !user) return
+  if (!signature || !chatroom || !user) return
 
   if (roomState === 'preview') {
     return (
