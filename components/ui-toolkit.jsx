@@ -17,7 +17,6 @@ function useUIToolKit() {
 export default function UIToolKit({ signature, chatroom, user }) {
   const [roomState, setRoomState] = useState('preview')
   useUIToolKit()
-  console.log({ signature, chatroom, user })
   useEffect(() => {
     if (!signature || !chatroom || !user) return
 
