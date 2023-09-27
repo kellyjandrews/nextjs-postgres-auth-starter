@@ -1,10 +1,7 @@
 import { getToken } from 'next-auth/jwt'
 import { NextResponse } from 'next/server'
 
-const basePath =
-  process.env.NODE_ENV === 'development'
-    ? 'http://kja.ngrok.io'
-    : 'https://nextjs-postgres-auth-starter-mauve-three.vercel.app/'
+const basePath = process.env.APP_URL
 
 export default async function middleware(req) {
   // Get the pathname of the request (e.g. /, /protected)

@@ -13,7 +13,7 @@ export async function POST(req) {
     return NextResponse.json({ error: 'User already exists' }, { status: 400 })
   } else {
     let host = false
-    if (email === 'kelly@kellyjandrews.com') host = true
+    if (email === process.env.ZOOM_HOST_EMAIL) host = true
     const user = await prisma.user.create({
       data: {
         email,
